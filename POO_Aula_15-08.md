@@ -1,14 +1,10 @@
 # Programação Orientada a Objetos - Anotações
 
-## Mandamentos do Furgeri
+## 📜Mandamentos do Furgeri📜
 
-1º Mandamento do Furgeri - 'Não desrespeitarás as convenções do Java'  
-
-2º Mandamento do Furgeri - 'Não usarás valores absolutos no código'  
-***SEMPRE UTILIZAR UMA CONSTANTE PARA REALIZAR OPERAÇÕES COM VALORES FIXOS NO PROGRAMA.  
-DECLARE UMA CONSTANTE NO INÍCIO DO PROGRAMA, E A UTILIZE ***  
-
-3º Mandamento do Furgeri - 'Não apresentarás valores de um array sem um laço de repetição'  
+🗿 1º Mandamento do Furgeri - 'Não desrespeitarás as convenções do Java'  
+🗿 2º Mandamento do Furgeri - 'Não usarás valores absolutos no código'  
+🗿 3º Mandamento do Furgeri - 'Não apresentarás valores de um array sem um laço de repetição'  
 
 ---
 
@@ -149,6 +145,7 @@ Usado para percorrer coleções e arrays:
 for (String s : nomes) {
     System.out.println(s);
 }
+// Irá apresentar todos os valores de 's' até o final do array
 ```
 
 ---
