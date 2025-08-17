@@ -5,6 +5,7 @@
 1º Mandamento do Furgeri - 'Não desrespeitarás as convenções do Java'  
 
 2º Mandamento do Furgeri - 'Não usarás valores absolutos no código'  
+***SEMPRE UTILIZAR UMA CONSTANTE PARA REALIZAR OPERAÇÕES COM VALORES FIXOS NO PROGRAMA.  
 DECLARE UMA CONSTANTE NO INÍCIO DO PROGRAMA, E A UTILIZE ***  
 
 3º Mandamento do Furgeri - 'Não apresentarás valores de um array sem um laço de repetição'  
