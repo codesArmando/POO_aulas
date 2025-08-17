@@ -2,9 +2,9 @@
 
 ## 📜Mandamentos do Furgeri📜
 
-🗿 1º Mandamento do Furgeri - 'Não desrespeitarás as convenções do Java'  
-🗿 2º Mandamento do Furgeri - 'Não usarás valores absolutos no código'  
-🗿 3º Mandamento do Furgeri - 'Não apresentarás valores de um array sem um laço de repetição'  
+🗿 1º Mandamento - 'Não desrespeitarás as convenções do Java'  
+🗿 2º Mandamento - 'Não usarás valores absolutos no código'  
+🗿 3º Mandamento - 'Não apresentarás valores de um array sem um laço de repetição'  
 
 ---
 
