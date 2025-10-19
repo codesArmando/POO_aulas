@@ -1,10 +1,12 @@
-# Programação Orientada a Objetos - Anotações
+# Programação Orientada a Objetos com Java
 
 ## 📜Mandamentos do Furgeri📜
 
 🗿 1º Mandamento - 'Não desrespeitarás as convenções do Java'  
 🗿 2º Mandamento - 'Não usarás valores absolutos no código'  
 🗿 3º Mandamento - 'Não apresentarás valores de um array sem um laço de repetição'  
+🗿 4º Mandamento - 'Nomearás seus métodos com a semântica adequada'
+🗿 5º Mandamento - 'Documentarás todos os métodos'
 
 ---
 
