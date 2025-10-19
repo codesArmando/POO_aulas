@@ -1,5 +1,3 @@
-# Introdução JAVA 1 (08-08)
-
 # Programação Orientada a Objetos com Java
 
 ## 📜Mandamentos do Furgeri📜
