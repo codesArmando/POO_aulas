@@ -10,76 +10,126 @@
 
 ---
 
-## Conteúdo Original Convertido
+## ☕ Introdução ao Java
 
-INTRODUÇÃO A JAVA
+O **Java** é uma linguagem de programação orientada a objetos, multiplataforma e fortemente tipada, desenvolvida pela Sun Microsystems (hoje Oracle).  
+Ela é amplamente utilizada em aplicações desktop, web, mobile e sistemas embarcados.
 
-O que é o JDK (Java Development Kit)?
-R: É o kit de ferramentas mínimo para desenvolvimento de aplicações em java. As ferramentas abaixo são parte do JDK:
-
-Compilador (javac)
-Interpretador de bytecode (java)
-Visualizador de applets (appletviewer)
-Gerador de documentação (javadoc)
-
-Ciclo de Desenvolvimento em Java:
-
-O Java é uma linguagem compilada, no ciclo de desenvolvimento o arquivo em Java é primeiro compilado, após isso caso esteja tudo certo o sistema gera um arquivo "executável" que é o arquivo interpretado para o funcionamento do programa.
+A principal filosofia do Java é o conceito de **“Write Once, Run Anywhere”** — ou seja, escreva uma vez e execute em qualquer lugar, graças à **Java Virtual Machine (JVM)**.
 
 ---
 
-CONVENÇÕES EM JAVA
+## 🔧 JDK, JRE e JVM
 
-São padrões que auxiliam na identificação dos componentes e itens do desenvolvimento de uma aplicação.
+### **JDK (Java Development Kit)**
+É o kit de desenvolvimento que contém todas as ferramentas necessárias para criar, compilar e executar programas Java.
 
-Nomes de arquivos (Camel Case com letra maiúscula no início)
-• Customer.java, RentalItem.java
+**Principais componentes do JDK:**
+- **Compilador (`javac`)** – converte o código-fonte `.java` em bytecode `.class`  
+- **Interpretador (`java`)** – executa o bytecode na JVM  
+- **Gerador de documentação (`javadoc`)** – cria documentação automática a partir de comentários JavaDoc  
+- **Visualizador de Applets (`appletviewer`)** – usado para testar applets (obsoleto nas versões modernas)
 
-Nomes de Classes (Camel Case com letra maiúscula no início)
-• Customer, RentalItem, InventorItem [Uma classe sempre começa com letras maiúsculas]
+### **JRE (Java Runtime Environment)**
+É o ambiente de execução do Java, necessário apenas para rodar programas, não para desenvolvê-los.
 
-Nomes de Pacotes (Snake Case)
-• semana01, br.com.fatec.poo
-
-Nomes de Métodos (Camel Case)
-• getCustomerName(), setRentalItemPrice()
-
-Standard para variáveis (Camel Case)
-• customerName, customerCreditLimit
-
-Standard para constantes (Upper Case)
-• MIN_WIDTH, MAX_NUMBER_OF_ITEMS
----
-
-Criando uma aplicação em java
- 
-1. Criar um arquivo .java com o código da aplicação.
-
-Diferença entre uma classe e uma aplicação - uma aplicação é algo executável, uma classe é um modelo que é consumido/utilizado por uma aplicação (uma aplicação consome classes). 
-
-- Uma classe pode ser criada, mas também existem classes fixas das próprias aplicações (comandos)
-
-- Uma classe está dentro do arquivo, e o nome do arquivo sempre precisa ser igual ao nome da classe.
-
-2. Usando as ferramentas da linguagem para compilar e executar o arquivo .java criado:
-- Primeiro, na pasta do JDK, chamamos o javac para compilar o arquivo .java indicando seu caminho;(javac caminho_do_arquivo);
-* Após isso, o javac que é o compilador do JDK vai criar um arquivo "executável"
-* A JVM (Java Virtual Machine) é responsável por interpretar o arquivo .class gerado pelo compilador para que a aplicação funcione. É a maquina virtual que conversa com o sistema operacional.
-
-- Rodar o arquivo.class com o java para executá-lo (java caminho arquivo);
-
-CTRL+A e CTRL+I aplica a identação em todo o arquivo.
+### **JVM (Java Virtual Machine)**
+É a máquina virtual responsável por interpretar o bytecode e executar o programa em qualquer sistema operacional.
 
 ---
 
-Package - é uma pasta onde as classes estão sendo armazenadas.
+## 🔁 Ciclo de Desenvolvimento em Java
 
-Maneiras de declarar um Array em java
-String [] vetor = {"10","20"};
-String [] v = new String[2];
-v[0]="30";
-v[1]="40";
+1. **Escrever** o código-fonte (`.java`).
+2. **Compilar** usando o `javac`, que gera o arquivo `.class`.
+3. **Executar** o programa com o comando `java`, que roda o bytecode na JVM.
 
+```bash
+javac Programa.java
+java Programa
+```
 
+Esse processo garante portabilidade e segurança, uma das principais vantagens da linguagem.
 
+---
 
+## ✍️ Convenções de Código em Java
+
+As convenções servem para **padronizar e melhorar a legibilidade do código**.
+
+| Elemento | Convenção | Exemplo |
+|-----------|------------|----------|
+| Arquivos e Classes | CamelCase, com letra maiúscula | `Cliente.java`, `PedidoOnline.java` |
+| Métodos | camelCase, com letra minúscula | `getNome()`, `calcularTotal()` |
+| Variáveis | camelCase | `valorFinal`, `nomeUsuario` |
+| Constantes | MAIÚSCULAS | `MAX_VALOR`, `TAXA_DESCONTO` |
+| Pacotes | minúsculo e separados por ponto | `pacote1`, `br.com.empresa.app` |
+
+> 💡 **Dica:** Seguir as convenções evita confusão entre desenvolvedores e melhora a manutenção do código.
+
+---
+
+## 🧱 Estrutura Básica de uma Aplicação Java
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Olá, mundo!");
+    }
+}
+```
+
+- O arquivo deve ter o mesmo nome da classe principal.  
+- O método `main` é o ponto de entrada da aplicação.  
+- `System.out.println()` é usado para imprimir saídas no console.
+
+---
+
+## 📦 Packages (Pacotes)
+
+Um **package** é o local onde as classes de um projeto são **agrupadas e organizadas**.  
+Ele serve para **estruturar o código**, **evitar conflitos de nomes** e **facilitar a reutilização** de classes.  
+
+Os pacotes podem ser **importados** em outros arquivos, permitindo o uso das classes neles contidas — de forma semelhante a **bibliotecas**.
+
+```java
+package br.com.fatec.exemploanterior; // declarando o pacote da classe atual
+
+public class Principal {
+    public static void main(String[] args) {
+        Exemplo ex = new Exemplo(); // criando um objeto da classe Exemplo, que está no mesmo pacote
+        ex.olaMundo(); // chamando o método da classe Exemplo
+    }
+}
+```
+E se a classe Exemplo estivesse em outro pacote, seria necessário importá-la explicitamente:
+
+```java
+package br.com.fatec.exemplonovo // declarando o pacote da classe atual (não possui a classe Exemplo)
+import br.com.fatec.exemploanterior.Exemplo; // importando a classe Exemplo de outro pacote que possui a classe Exemplo
+
+public class Principal {
+    public static void main(String[] args) {
+        Exemplo ex = new Exemplo();
+        ex.olaMundo();
+    }
+}
+```
+Sem a importação adequada, a classe Exemplo não seria reconhecida pela aplicação,
+pois cada arquivo Java só “enxerga” as classes dentro do seu próprio pacote (ou as que são importadas).
+
+---
+
+## 📚 Arrays em Java
+
+Um **array** é uma estrutura que armazena vários valores do mesmo tipo.
+
+### Declaração e uso:
+
+```java
+String[] nomes = {"Ana", "Bruno", "Carlos"}; // Declarando e já inserindo valores
+int[] numeros = new int[3]; // Apenas declarando e definindo o tamanho
+numeros[0] = 10;
+numeros[1] = 20;
+numeros[2] = 30;
+```
